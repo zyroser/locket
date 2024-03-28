@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cổng Thanh Toán</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #36393f; /* Dark background color */
+    color: #fff; /* Text color */
+  }
+  .card {
+    width: 300px;
+    padding: 20px;
+    background-color: #2f3136; /* Darker background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .qrimage {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .line-text {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-left: 25px; /* Add left padding for logo */
+    position: relative;
+    font-weight: bold; /* Make text bold */
+  }
+  .line-text img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://api.vietqr.io/image/970422-0388711103-cOiQSZL.jpg?accountName=TRAN%20TRUNG%20HIEU&amount=27000" alt="Profile Image" class="qrimage">
+  <span class="line-text"><img src="./assets/i.png" alt="Logo"> Tên: Trần Trung Hiếu</span>
+  <span class="line-text"><img src="./assets/i.png" alt="Logo"> STK:</span>
+  <span class="line-text"><img src="./assets/mb.png" alt="Logo">    - MB: 0388711103</span>
+  <span class="line-text"><img src="./assets/momo.png" alt="Logo">    - MoMo: 0388711103</span>
+</div>
+
+</body>
+</html>
