@@ -1,68 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cổng Thanh Toán</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #36393f; /* Dark background color */
-    color: #fff; /* Text color */
-  }
-  .card {
-    width: 300px;
-    padding: 20px;
-    background-color: #2f3136; /* Darker background color */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  .qrimage {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  .line-text {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
-    padding-left: 25px; /* Add left padding for logo */
-    position: relative;
-    font-weight: bold; /* Make text bold */
-  }
-  .line-text img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #333; /* Dark background color */
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #444; /* Box background color */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow */
+      margin-bottom: 20px;
+    }
+    .profile, .bank-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      margin: 0 auto; /* Center align */
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .profile-info, .bank-details {
+      flex-grow: 1;
+      color: #fff; /* White text color */
+    }
+    .profile-info h2, .bank-details h2 {
+      margin: 0 0 5px;
+    }
+    .stk-ctk {
+      font-size: 18px;
+      color: #ccc; /* Gray text color */
+    }
+    .bank-logo {
+      width: 80px; /* Smaller logo size */
+      height: 80px;
+      border-radius: 50%; /* Circle logo */
+      margin-right: 20px;
+    }
+    .role {
+      display: inline-block;
+      background-color: #555; /* Role background color */
+      color: #fff; /* White text color */
+      padding: 8px 12px; /* Padding */
+      border-radius: 5px; /* Rounded corners */
+      margin-right: 10px; /* Margin between roles */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Role shadow */
+    }
+    .role-circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px; /* Margin between circle and role name */
+    }
+
+    /* Role colors */
+    .role-hocsinh .role-circle {
+      background-color: #fff; /* White */
+    }
+
+    .role-coder .role-circle {
+      background-color: #FF5733; /* Orange */
+    }
+
+    .role-editor .role-circle {
+      background-color: #47FF33; /* Green */
+    }
+
+    /* Media queries */
+    @media (max-width: 600px) {
+      .profile, .bank-info {
+        flex-direction: column;
+        text-align: center;
+      }
+      .avatar {
+        margin: 0 0 10px;
+      }
+      .bank-logo {
+        margin: 0 0 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-<script src="./webhook.js"></script>
-<iframe src="./assets/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
 
-<div class="card">
-  <img src="https://api.vietqr.io/image/970422-0388711103-cOiQSZL.jpg?accountName=TRAN%20TRUNG%20HIEU&amount=27000" alt="Profile Image" class="qrimage">
-  <span class="line-text"><img src="./assets/i.png" alt="Logo"> Tên: Trần Trung Hiếu</span>
-  <span class="line-text"><img src="./assets/i.png" alt="Logo"> STK:</span>
-  <span class="line-text"><img src="./assets/mbb.png" alt="Logo">    - MB: 0388711103</span>
-  <span class="line-text"><img src="./assets/momo.png" alt="Logo">    - MoMo: 0388711103</span>
+<div class="container">
+  <div class="profile">
+    <img class="avatar" src="https://graph.facebook.com/100067416985238/picture?width=720&height=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662" alt="User Avatar">
+    <div class="profile-info">
+      <h2>Trung Hieu Tran</h2>
+      <p>Khong biet noi gi het!!</p>
+      <div class="role role-hocsinh">
+        <div class="role-circle"></div>
+        Học Sinh
+      </div>
+      <div class="role role-coder">
+        <div class="role-circle"></div>
+        Coder
+      </div>
+      <div class="role role-editor">
+        <div class="role-circle"></div>
+        Editor
+      </div>
+    </div>
+  </div>
 </div>
 
-<audio id="player" autoplay loop>
-    <source src="./assets/music.mp3" type="audio/mp3">
-</audio>
+<div class="container">
+  <div class="bank-info">
+    <img class="bank-logo" src="https://i.ibb.co/mqspPYR/mbbank.png" alt="MB BANK Logo">
+    <div class="bank-details">
+      <h2>MB BANK</h2>
+      <div class="stk-ctk">
+        <div>STK: 0388711103</div>
+        <div>CTK: TRAN TRUNG HIEU</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="bank-info">
+    <img class="bank-logo" src="https://i.ibb.co/ftkz6ff/momo.jpg" alt="MOMO Logo">
+    <div class="bank-details">
+      <h2>MOMO</h2>
+      <div class="stk-ctk">
+        <div>STK: 0388711103</div>
+        <div>CTK: Trần Trung Hiếu</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
